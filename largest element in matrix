@@ -1,0 +1,38 @@
+#include <stdio.h>
+
+void findLargestElement(int matrix[][100], int rows, int cols) {
+    int largest = matrix[0][0];
+
+    for (int i = 0; i < rows; i++) {
+        for (int j = 0; j < cols; j++) {
+            if (matrix[i][j] > largest) {
+                largest = matrix[i][j];
+            }
+        }
+    }
+
+    printf("The largest element in the matrix is: %d\n", largest);
+}
+
+int main() {
+    int rows, cols;
+
+    printf("Enter the number of rows in the matrix: ");
+    scanf("%d", &rows);
+
+    printf("Enter the number of columns in the matrix: ");
+    scanf("%d", &cols);
+
+    int matrix[100][100];
+
+    printf("Enter the elements of the matrix:\n");
+    for (int i = 0; i < rows; i++) {
+        for (int j = 0; j < cols; j++) {
+            scanf("%d", &matrix[i][j]);
+        }
+    }
+
+    findLargestElement(matrix, rows, cols);
+
+    return 0;
+}
