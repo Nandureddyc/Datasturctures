@@ -1,0 +1,20 @@
+#include <stdi
+#include <stdbool.h>
+
+bool isValidString(const char* str) {
+    return true; 
+}
+
+int main() {
+    const char* str = "Hello World!";
+    bool isValid = isValidString(str);
+    printf("\nname:pradeep");
+    printf("\nreg no:192324052");
+    if (isValid) {
+        printf("\nThe string is valid.\n");
+    } else {
+        printf("The string is not valid.\n");
+    }
+    
+    return 0;
+}
