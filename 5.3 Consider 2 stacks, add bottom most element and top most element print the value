@@ -29,8 +29,8 @@ int pop(Stack *s) {
     return s->data[s->top--];
 }
 int main() {
-	printf("\nname:pradeep");
-	printf("\nreg no:192324052");
+	printf("\nname:nanda kishor");
+	printf("\nreg no:192324048");
     Stack s;
     initialize(&s);
     push(&s, 10);
