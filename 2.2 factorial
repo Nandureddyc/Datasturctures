@@ -3,8 +3,8 @@
 int main() {
     unsigned int num;
     unsigned long long result = 1;
-printf("\nname:pradeep");
-printf("\nreg no:192324052");
+printf("\nname:nanda kishor");
+printf("\nreg no:192324048");
     printf("\nEnter a non-negative integer to find its factorial: ");
     scanf("%u", &num);
 
