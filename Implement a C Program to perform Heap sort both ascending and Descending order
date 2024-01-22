@@ -1,0 +1,73 @@
+#include <stdio.h>
+
+// Function to swap two elements
+void swap(int* a, int* b) {
+    int temp = *a;
+    *a = *b;
+    *b = temp;
+}
+
+// Function to heapify a subtree rooted at index i
+void heapify(int arr[], int n, int i, int order) {
+    int largest = i; // Initialize largest as root
+    int left = 2 * i + 1; // Left child
+    int right = 2 * i + 2; // Right child
+
+    // Compare left child with root
+    if (left < n && ((order == 1 && arr[left] > arr[largest]) || (order == 2 && arr[left] < arr[largest])))
+        largest = left;
+
+    // Compare right child with largest so far
+    if (right < n && ((order == 1 && arr[right] > arr[largest]) || (order == 2 && arr[right] < arr[largest])))
+        largest = right;
+
+    // If largest is not root, swap and heapify the affected subtree
+    if (largest != i) {
+        swap(&arr[i], &arr[largest]);
+        heapify(arr, n, largest, order);
+    }
+}
+
+// Main function to perform heap sort
+void heapSort(int arr[], int n, int order) {
+    // Build heap (rearrange array)
+    for (int i = n / 2 - 1; i >= 0; i--)
+        heapify(arr, n, i, order);
+
+    // Extract elements from heap one by one
+    for (int i = n - 1; i > 0; i--) {
+        // Move current root to end
+        swap(&arr[0], &arr[i]);
+
+        // call max heapify on the reduced heap
+        heapify(arr, i, 0, order);
+    }
+}
+
+// Function to print an array
+void printArray(int arr[], int n) {
+    for (int i = 0; i < n; i++)
+        printf("%d ", arr[i]);
+    printf("\n");
+}
+
+// Driver code
+int main() {
+    int arr[] = { 12, 11, 13, 5, 6, 7 };
+    int n = sizeof(arr) / sizeof(arr[0]);
+
+    printf("Original array: ");
+    printArray(arr, n);
+
+    // Sort the array in ascending order
+    heapSort(arr, n, 1);
+    printf("Array sorted in ascending order: ");
+    printArray(arr, n);
+
+    // Sort the array in descending order
+    heapSort(arr, n, 2);
+    printf("Array sorted in descending order: ");
+    printArray(arr, n);
+printf("nanda kishor");
+    return 0;
+}
