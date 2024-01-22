@@ -151,3 +151,39 @@ Day 12
 12.2 Implement a C Program for Min Heap and Max Heap and perform Insertion  of Nodes
 
 12.3 Implement a C Program to perform Heap sort both ascending and Descending order
+Day 13
+13.1  Implement a C Program to perform Merge Sort
+ 
+13.2 Implement a C Program to perform Insertion Sort
+
+13.3 Implement a C Program to perform Radix Sort
+
+13.4 Implement a C Program to perform Bubble Sort
+ 
+13.5 Implement a C Program to perform Shell Sort
+
+Day 14
+
+14.1 Implement a C Program to perform Quick Sort
+
+14.2 Implement a C Program to perform Selection Sort
+
+Day 15
+
+15.1 Implement a C Program to represent a Graph  using Matrix
+ 
+  15.2 Implement a C Program to represent a Graph using Linked List
+     
+15.3 Implement a C Program to perform Topological ordering
+
+Day 16
+
+16.1 Implement a C Program to find MST for the given graph using Prim's Algorithm
+ 
+    16.2 Implement a C Program to find MST for the given graph using Kruskal's Algorithm
+    
+    Day 17
+    
+17.1 Implement a C Program to find the shortest path for the given weighted directed graph using Dijkstra's Algorithm
+ 
+    17.2 Implement a C Program to find MST shortest path for the given unweighted directed graph using Dijkstra's Algorithm
