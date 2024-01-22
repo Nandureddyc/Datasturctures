@@ -1,0 +1,57 @@
+#include <stdio.h>
+
+#define MAX_SIZE 100
+
+int graph[MAX_SIZE][MAX_SIZE];
+int vertices;
+
+void initializeGraph() {
+    int i, j;
+    for (i = 0; i < MAX_SIZE; i++) {
+        for (j = 0; j < MAX_SIZE; j++) {
+            graph[i][j] = 0;
+        }
+    }
+}
+
+void addEdge(int source, int destination) {
+    if (source >= 0 && source < vertices && destination >= 0 && destination < vertices) {
+        graph[source][destination] = 1;
+        graph[destination][source] = 1;
+    } else {
+        printf("Invalid edge!\n");
+    }
+}
+
+void displayGraph() {
+    int i, j;
+    for (i = 0; i < vertices; i++) {
+        for (j = 0; j < vertices; j++) {
+            printf("%d ", graph[i][j]);
+        }
+        printf("\n");
+    }
+}
+
+int main() {
+    int i, j, edges, source, destination;
+
+    printf("Enter the number of vertices: ");
+    scanf("%d", &vertices);
+
+    initializeGraph();
+
+    printf("Enter the number of edges: ");
+    scanf("%d", &edges);
+
+    printf("Enter the edges (source destination):\n");
+    for (i = 0; i < edges; i++) {
+        scanf("%d %d", &source, &destination);
+        addEdge(source, destination);
+    }
+
+    printf("Graph representation using matrix:\n");
+    displayGraph();
+
+    return 0;
+}
