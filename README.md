@@ -151,7 +151,9 @@ Day 12
 12.2 Implement a C Program for Min Heap and Max Heap and perform Insertion  of Nodes
 
 12.3 Implement a C Program to perform Heap sort both ascending and Descending order
+
 Day 13
+
 13.1  Implement a C Program to perform Merge Sort
  
 13.2 Implement a C Program to perform Insertion Sort
@@ -186,4 +188,10 @@ Day 16
     
 17.1 Implement a C Program to find the shortest path for the given weighted directed graph using Dijkstra's Algorithm
  
-    17.2 Implement a C Program to find MST shortest path for the given unweighted directed graph using Dijkstra's Algorithm
+17.2 Implement a C Program to find MST shortest path for the given unweighted directed graph using Dijkstra's Algorithm
+
+Day 18
+
+18.1 Implement a C Program to find BFS for the given graph
+ 
+  18.2 Implement a C Program to find DFS for the given graph
