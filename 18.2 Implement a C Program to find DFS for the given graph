@@ -1,0 +1,61 @@
+#include <stdio.h>
+#include <stdbool.h>
+
+#define MAX_VERTICES 100
+
+// Function to perform Depth First Search
+void DFS(int graph[MAX_VERTICES][MAX_VERTICES], bool visited[MAX_VERTICES], int vertex, int numVertices) {
+    printf("%d ", vertex);
+    visited[vertex] = true;
+
+    for (int i = 0; i < numVertices; i++) {
+        if (graph[vertex][i] && !visited[i]) {
+            DFS(graph, visited, i, numVertices);
+        }
+    }
+}
+
+// Function to initialize the visited array
+void initializeVisited(bool visited[MAX_VERTICES], int numVertices) {
+    for (int i = 0; i < numVertices; i++) {
+        visited[i] = false;
+    }
+}
+
+// Main function
+int main() {
+    int numVertices, numEdges;
+    printf("Enter the number of vertices: ");
+    scanf("%d", &numVertices);
+    printf("Enter the number of edges: ");
+    scanf("%d", &numEdges);
+
+    int graph[MAX_VERTICES][MAX_VERTICES];
+    bool visited[MAX_VERTICES];
+
+    // Initialize the graph with 0
+    for (int i = 0; i < numVertices; i++) {
+        for (int j = 0; j < numVertices; j++) {
+            graph[i][j] = 0;
+        }
+    }
+
+    // Read the edges of the graph
+    printf("Enter the edges (vertex1 vertex2):\n");
+    for (int i = 0; i < numEdges; i++) {
+        int vertex1, vertex2;
+        scanf("%d %d", &vertex1, &vertex2);
+        graph[vertex1][vertex2] = 1;
+        graph[vertex2][vertex1] = 1;
+    }
+
+    // Initialize the visited array
+    initializeVisited(visited, numVertices);
+
+    // Perform DFS starting from vertex 0
+    printf("DFS traversal: ");
+    DFS(graph, visited, 0, numVertices);
+
+    return 0;
+}
+"C:\Users\mohan\OneDrive\Pictures\Screenshots\Screenshot 2024-01-23 082515.png"
